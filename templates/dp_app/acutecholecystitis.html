@@ -1,0 +1,77 @@
+{% extends 'dp_app/base.html' %}
+
+{% load static %}
+
+
+
+{% block content %}
+
+
+<div class="wrapper" style="margin-left: 400px;margin-top: -40px;">
+    <div class="inner">
+        <form method="post">
+            {% csrf_token %}
+            <h3>Acute Cholecystitis</h3>
+            <div>
+                {% for message in messages%}
+                <h3>{{message}}</h3>
+                {% endfor %}
+            </div>
+
+            <div>
+                <h4>Are You Suffering From Fever?</h4>
+                <select name="fever">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </div><br />
+
+            <div>
+                <h4>Are You Feeling Nausea?</h4>
+                <select name="nausea">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </div><br />
+
+            <div>
+                <h4>Are You Sweating Alot?</h4>
+                <select name="sweat">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </div><br />
+
+
+            <div>
+                <h4>Do You Experience Loss Of Appetite?</h4>
+                <select name="appetite">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </div><br />
+
+            <div>
+                <h4>Is Your Skin Turning Yellow?</h4>
+                <select name="yellowskin">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </div><br />
+
+            <div>
+                <h4>Do You Feel Abdominal Bulge?</h4>
+                <select name="abdomin">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </div><br />
+
+            <button style="color: white;">Check</button>
+        </form>
+
+    </div>
+
+</div>
+<button style="color: white; margin-top: -600px; margin-left: 50px" onclick="btnfunc()">Back To Index</button>
+{% endblock %}

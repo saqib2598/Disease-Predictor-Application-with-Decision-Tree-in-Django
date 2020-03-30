@@ -1,0 +1,77 @@
+{% extends 'dp_app/base.html' %}
+
+{% load static %}
+
+
+
+{% block content %}
+<div class="wrapper" style="margin-left: 400px;margin-top: -40px;">
+    <div class="inner">
+        <form method="post">
+            {% csrf_token %}
+            <h3>Diabetes</h3>
+            <div>
+                {% for message in messages%}
+                <h3>{{message}}</h3>
+                {% endfor %}
+            </div>
+
+            <div>
+                <h4>Are You Having A Blurred Vision?</h4>
+                <select name="vision">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </div><br />
+
+            <div>
+                <h4>Do You Feel Thirsty more than Usual?</h4>
+                <select name="thirsty">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </div><br />
+
+            <div>
+                <h4>Have You Experienced Weight Loss in the Past two Months?</h4>
+                <select name="weightloss">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </div><br />
+
+
+            <div>
+                <h4>Does Your Wounds Heal Slowly?</h4>
+                <select name="wounds">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </div><br />
+
+            
+
+            <div>
+                <h4>Are You Tired All the Time?</h4>
+                <select name="tired">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </div><br />
+
+            <div>
+                <h4>Do You Urinate Frequently, Mostly At Night?</h4>
+                <select name="urine">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </div><br />
+
+            <button style="color: white;">Check</button>
+        </form>
+
+    </div>
+
+</div>
+<button style="color: white; margin-top: -600px; margin-left: 50px" onclick="btnfunc()">Back To Index</button>
+{% endblock %}

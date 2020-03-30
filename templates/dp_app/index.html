@@ -1,0 +1,19 @@
+{% extends 'dp_app/base.html' %}
+
+{% load static %}
+
+
+
+{% block content %}
+
+
+<div style="margin-left: 40%;">
+    <h1>Click Disease To Check</h1>
+    <ul style="margin-top: 30px;">
+        <li><a href="{% url 'dp_app-acute' %}">Acute Cholecystitis</a></li>
+        <li><a href="{% url 'dp_app-bronchitis' %}">Bronchitis</a></li>
+        <li><a href="{% url 'dp_app-diabetes' %}">Diabetes</a></li>
+        <li><a href="{% url 'dp_app-hepatitisC' %}">Hepatitis C</a></li>
+    </ul>
+</div>
+{% endblock %}
